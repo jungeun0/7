@@ -8,6 +8,9 @@ int main(int argc, char *argv[]) {
 	 int i,j,k;
 	 int grade[5];
 	 int sum=0;
+	 int *ptr;
+	 ptr = grade;
+	  
 	 
 	 for(i=0;i<5;i++){
 	 	printf("input value (%d) = ", i);
@@ -17,11 +20,10 @@ int main(int argc, char *argv[]) {
 	 	printf("grade[%d] : %d \n", j, grade[j]);
 	 }
 	 for(k=0;k<5;k++){
-	 	sum = grade[k] + sum;	
+	 	sum = *(ptr+k) + sum;	
 	 }
 	
 	
-	printf("average : %d\n",sum/i);
-	
+	printf("average : %d\n",sum/i); 
 	return 0;
 }
