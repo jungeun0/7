@@ -2,29 +2,38 @@
 #include <stdlib.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-void swap (int *x, int *y){
+void swap(int *one[],int *two[],int x, int y){
 	int temp;
-	temp = *x;
-	*x = *y;
-	*y = temp;	
+	
+	temp = *one[x];
+	*one[x] = *two[y];
+	*two[y] = temp;
+	
 }
-
 
 
 int main(int argc, char *argv[]) {
 	
-	 int a;
-	 int b;
+	 int one[5];
+	 int two[5];
+	 int k,j;
+	 int i,l;
 	 
-	 printf("x :  ");
-	 scanf("%d",&a);
+	 for(i=0;i<5;i++){
+	 	printf("input value : ");
+	 	scanf("%d",one[i]);
+	 	 }
+	 for(l=0;l<5;l++){
+	 	 printf("input value : ");
+	 	scanf("%d",two[l]);
+	 }
+	 printf("input index number : ");
+	 scanf("%d %d", &j,&k);
 	 
-	 printf("y :  ");
-	 scanf("%d", &b);
+	 swap(&one,&two,j,k);
 	 
-	 swap(&a,&b);
+	 printf("swapped numbers : ");
 	 
-	 printf("x : %d y : %d" ,a,b);
-	 
+	 printf("%d %d", one[j], two[k]);
 	return 0;
 }
