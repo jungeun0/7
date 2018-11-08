@@ -5,14 +5,16 @@
 
 int main(int argc, char *argv[]) {
 	
-	int x = 10;
-	int *ptr;
-	
-	ptr = &x;
-	printf("ptr value : %d\n", *ptr);
-	
-	*ptr = 20;
-	printf("x value : %d\n", x);
+	 int i,j;
+	 int grade[5];
+	 
+	 for(i=0;i<5;i++){
+	 	printf("input value (%d) = ", i);
+	 	scanf("%d", &grade[i]);
+	 }
+	 for(j=0;j<5;j++){
+	 	printf("grade[%d] : %d \n", j, grade[j]);
+	 }
 	
 	return 0;
 }
